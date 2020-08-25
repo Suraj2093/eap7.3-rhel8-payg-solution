@@ -1,0 +1,76 @@
+{
+  "location": {
+    "value": "eastus"
+  },
+  "vmName": {
+    "value": "jbosseap-rhel8-payg-vm1"
+  },
+  "adminUsername": {
+    "value": "demouser1"
+  },
+  "authenticationType": {
+    "value": "password"
+  },
+  "adminPasswordOrSSHKey": {
+    "value": "demoPassword1!"
+  },
+  "vmSize": {
+    "value": "Standard_DS2_v2"
+  },
+  "virtualNetworkNewOrExisting": {
+    "value": "existing"
+  },
+  "virtualNetworkName": {
+    "value": "external-rhel-vnet"
+  },
+  "addressPrefixes": {
+    "value": [
+      "10.0.0.0/16"
+    ]
+  },
+  "subnetName": {
+    "value": "external-rhel-subnet"
+  },
+  "subnetPrefix": {
+    "value": "10.0.1.0/24"
+  },
+  "virtualNetworkResourceGroupName": {
+    "value": "PIP-test-rg1"
+  },
+  "publicIpNewOrExisting": {
+    "value": "existing"
+  },
+  "publicIpName": {
+    "value": "rhel77-pip1"
+  },
+  "publicIpDns": {
+    "value": "rhel77-pip1"
+  },
+  "publicIpResourceGroupName": {
+    "value": "PIP-test-rg1"
+  },
+  "publicIPAllocationMethod": {
+    "value": "Dynamic"
+  },
+  "publicIpSku": {
+    "value": "Basic"
+  },
+  "bootDiagnostics": {
+    "value": "Off"
+  },
+  "jbossEAPUserName": {
+    "value": "demouser1"
+  },
+  "jbossEAPPassword": {
+    "value": "demoPassword1!"
+  },
+  "rhsmUserName": {
+    "value": "surajpaispektra"
+  },
+  "rhsmPassword": {
+    "value": "Spektra@123"
+  },
+  "rhsmPoolEAP": {
+    "value": "8a85f996710f3b1801716f5db33b3fab"
+  }
+}

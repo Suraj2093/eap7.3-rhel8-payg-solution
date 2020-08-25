@@ -1,0 +1,85 @@
+{
+  "location": {
+    "value": "westus"
+  },
+  "vmName": {
+    "value": "jbosseap-rhel8-payg-vm3"
+  },
+  "adminUsername": {
+    "value": "demouser"
+  },
+  "authenticationType": {
+    "value": "sshPublicKey"
+  },
+  "adminPasswordOrSSHKey": {
+    "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAsvQd8Ie4w+cl4irCajWjEnfoa+XQ+c0z7O/ruFEPbOD2Gt4tU9XwoPWVS1ehAziAg8qzKHEZ0gPvSAwIVFqXkxsI3cofl1U7/aU0ELipbc4u/gqj/gDn3WS9Y2w4iGU3/4ifPZYOL5nN9lGS2ixz3Xp7wX22/L8H2RdAKnQYKdS+eWYy/RCTvc1CAXphvEXEDFYp0m0KE9VxBSXNHsvdCI8DyUjQWvNRgKRQowUSAvwZBBH6YlXqQhyPCEDFfcriwTKZ9e56DzulIHjgm35Oucs7Mdx1L0+0/eoZ1CM5TxwfXec1YVGjz+9jgb8GGe+9H06yvFsjAUbJ70dj9UXIDw=="
+  },
+  "vmSize": {
+    "value": "Standard_F2s_v2"
+  },
+  "virtualNetworkNewOrExisting": {
+    "value": "new"
+  },
+  "virtualNetworkName": {
+    "value": "rhel8-payg-vnet1"
+  },
+  "addressPrefixes": {
+    "value": [
+      "10.11.0.0/16"
+    ]
+  },
+  "subnetName": {
+    "value": "rhel8-payg-subnet1"
+  },
+  "subnetPrefix": {
+    "value": "10.11.1.0/24"
+  },
+  "virtualNetworkResourceGroupName": {
+    "value": "EAP72-RHEL8-payg-Soln-Test-Rg3"
+  },
+  "publicIpNewOrExisting": {
+    "value": "new"
+  },
+  "publicIpName": {
+    "value": "rhel8-payg-vm3-ip1"
+  },
+  "publicIpDns": {
+    "value": "rhel8-payg-vm3-ip1"
+  },
+  "publicIpResourceGroupName": {
+    "value": "EAP72-RHEL8-payg-Soln-Test-Rg3"
+  },
+  "publicIPAllocationMethod": {
+    "value": "Static"
+  },
+  "publicIpSku": {
+    "value": "Standard"
+  },
+  "bootDiagnostics": {
+    "value": "On"
+  },
+  "storageNewOrExisting": {
+    "value": "new"
+  },
+  "storageAccountName": {
+    "value": "diagstrgbdn"
+  },
+  "storageAccountType": {
+    "value": "Standard_LRS"
+  },
+  "jbossEAPUserName": {
+    "value": "demouser1"
+  },
+  "jbossEAPPassword": {
+    "value": "demoPassword1!"
+  },
+  "rhsmUserName": {
+    "value": "surajpaispektra"
+  },
+  "rhsmPassword": {
+    "value": "Spektra@123"
+  },
+  "rhsmPoolEAP": {
+    "value": "8a85f99972762fce017299694421707a"
+  }
+}
