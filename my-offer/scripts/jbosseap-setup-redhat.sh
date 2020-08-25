@@ -16,21 +16,21 @@ RHSM_PASSWORD=$4
 RHSM_POOL=$5
 
 
-echo "Initial JBoss EAP 7.2 setup" | adddate >> eap.log
+echo "Initial JBoss EAP 7.3 setup" | adddate >> eap.log
 echo "subscription-manager register --username RHSM_USER --password RHSM_PASSWORD" | adddate >> eap.log
 subscription-manager register --username $RHSM_USER --password $RHSM_PASSWORD >> eap.log 2>&1
 flag=$?; if [ $flag != 0 ] ; then echo  "ERROR! Red Hat Subscription Manager Registration Failed" | adddate >> eap.log; exit $flag;  fi
 echo "subscription-manager attach --pool=EAP_POOL" | adddate  >> eap.log
 subscription-manager attach --pool=${RHSM_POOL} >> eap.log 2>&1
 flag=$?; if [ $flag != 0 ] ; then echo  "ERROR! Pool Attach for JBoss EAP Failed" | adddate  >> eap.log; exit $flag;  fi
-echo "Subscribing the system to get access to JBoss EAP 7.2 repos" | adddate >> eap.log
+echo "Subscribing the system to get access to JBoss EAP 7.3 repos" | adddate >> eap.log
 
-# Install JBoss EAP 7.2
-echo "subscription-manager repos --enable=jb-eap-7.2-for-rhel-8-x86_64-rpms" | adddate >> eap.log
-subscription-manager repos --enable=jb-eap-7.2-for-rhel-8-x86_64-rpms >> eap.log 2>&1
+# Install JBoss EAP 7.3
+echo "subscription-manager repos --enable=jb-eap-7.3-for-rhel-8-x86_64-rpms" | adddate >> eap.log
+subscription-manager repos --enable=jb-eap-7.3-for-rhel-8-x86_64-rpms >> eap.log 2>&1
 flag=$?; if [ $flag != 0 ] ; then echo  "ERROR! Enabling repos for JBoss EAP Failed" | adddate >> eap.log; exit $flag;  fi
 
-echo "Installing JBoss EAP 7.2 repos" | adddate >> eap.log
+echo "Installing JBoss EAP 7.3 repos" | adddate >> eap.log
 echo "yum groupinstall -y jboss-eap7" | adddate >> eap.log
 yum groupinstall -y jboss-eap7 >> eap.log 2>&1
 flag=$?; if [ $flag != 0 ] ; then echo  "ERROR! JBoss EAP installation Failed" | adddate >> eap.log; exit $flag;  fi
