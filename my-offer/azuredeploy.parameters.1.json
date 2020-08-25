@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "southcentralus"
+    "value": "eastus"
   },
   "vmName": {
-    "value": "jbosseap73-rhel8-payg-vm1"
+    "value": "jbosseap73-rhel8-payg-vm3"
   },
   "adminUsername": {
     "value": "demouser"
@@ -15,42 +15,54 @@
     "value": "demoPassword1!"
   },
   "vmSize": {
-    "value": "Standard_E2s_v3"
+    "value": "Standard_DS2_v2"
   },
   "virtualNetworkNewOrExisting": {
-    "value": "new"
+    "value": "existing"
   },
   "virtualNetworkName": {
-    "value": "VirtualNetwork"
+    "value": "external-rhel-vnet"
   },
   "addressPrefixes": {
     "value": [
-      "10.13.0.0/16"
+      "10.0.0.0/16"
     ]
   },
   "subnetName": {
-    "value": "Subnet-1"
+    "value": "external-rhel-subnet"
   },
   "subnetPrefix": {
-    "value": "10.13.0.0/24"
+    "value": "10.0.1.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "EAP73-RHEL8-payg-Soln-Test-Rg1"
+    "value": "PIP-test-rg1"
   },
   "publicIpNewOrExisting": {
-    "value": "none"
+    "value": "new"
+  },
+  "publicIpName": {
+    "value": "jbosseap73-rhel8-payg-vm3-ip"
   },
   "publicIpDns": {
-    "value": ""
+    "value": "jbosseap73-rhel8-payg-vm3-25f22f2a61"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP73-RHEL8-payg-Soln-Test-Rg1"
+    "value": "EAP73-RHEL8-payg-Soln-Test-Rg3"
   },
-  "publicIpSku": {
-    "value": "Basic"
+  "publicIPAllocationMethod": {
+    "value": "Dynamic"
   },
   "bootDiagnostics": {
-    "value": "Off"
+    "value": "On"
+  },
+  "storageNewOrExisting": {
+    "value": "new"
+  },
+  "storageAccountName": {
+    "value": "jbosseap0a224ba218"
+  },
+  "storageAccountType": {
+    "value": "Standard_LRS"
   },
   "jbossEAPUserName": {
     "value": "demouser1"
@@ -59,7 +71,7 @@
     "value": "demoPassword1!"
   },
   "rhsmUserName": {
-    "value": "surajpaispektra"
+    "value": "surajpaispekt"
   },
   "rhsmPassword": {
     "value": "Spektra@123"
