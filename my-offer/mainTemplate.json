@@ -251,6 +251,7 @@
             }
         },
         {
+            "condition": "[variables('bootdiagnosticscheck')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "name": "[parameters('storageAccountName')]",
@@ -258,10 +259,10 @@
             "sku": {
                 "name": "[parameters('storageAccountType')]"
             },
-            "kind": "Storage",
-            "condition": "[variables('bootdiagnosticscheck')]"
+            "kind": "Storage"
         },
         {
+            "condition": "[equals(parameters('publicIpNewOrExisting'), 'new')]",
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2019-11-01",
             "name": "[parameters('publicIpName')]",
@@ -274,8 +275,7 @@
                 "dnsSettings": {
                     "domainNameLabel": "[parameters('publicIpDns')]"
                 }
-            },
-            "condition": "[equals(parameters('publicIpNewOrExisting'), 'new')]"
+            }
         },
         {
             "type": "Microsoft.Network/networkSecurityGroups",
@@ -330,12 +330,13 @@
             }
         },
         {
+            "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'new')]",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2019-11-01",
             "name": "[parameters('virtualNetworkName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]"
+                "[variables('networkSecurityGroupName')]"
             ],
             "properties": {
                 "addressSpace": {
@@ -352,8 +353,7 @@
                         }
                     }
                 ]
-            },
-            "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'new')]"
+            }
         },
         {
             "type": "Microsoft.Network/networkInterfaces",
@@ -361,9 +361,9 @@
             "name": "[variables('nicName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Network/publicIPAddresses/', parameters('publicIpName'))]",
-                "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
-                "[concat('Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]"
+                "[parameters('publicIpName')]",
+                "[parameters('virtualNetworkName')]",
+                "[variables('networkSecurityGroupName')]"
             ],
             "properties": {
                 "networkSecurityGroup": {
@@ -390,7 +390,7 @@
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[if(equals(parameters('bootDiagnostics'),'On'), parameters('storageAccountName'), variables('networkSecurityGroupName'))]",
-                "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
+                "[variables('nicName')]"
             ],
             "properties": {
                 "hardwareProfile": {
@@ -431,7 +431,7 @@
             "name": "[concat(parameters('vmName'),'/jbosseap-setup-extension')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
+                "[parameters('vmName')]"
             ],
             "properties": {
                 "publisher": "Microsoft.Azure.Extensions",

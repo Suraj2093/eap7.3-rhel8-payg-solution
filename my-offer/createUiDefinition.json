@@ -244,7 +244,9 @@
                         "label": "RHSM Pool ID with EAP entitlement",
                         "toolTip": "RedHat Subscription Manager Pool ID (Should have EAP entitlement)",
                         "constraints": {
-                            "required": true
+                            "required": true,
+                            "regex": "^[a-f0-9A-F]{32}$",
+                            "validationMessage": "The RHSM Pool ID must be 32 characters long and should contain only alphabets between a to f and numbers."
                         }
                     }
                 ]
