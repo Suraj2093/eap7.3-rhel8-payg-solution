@@ -1,9 +1,9 @@
 {
   "location": {
-    "value": "eastus"
+    "value": "westus2"
   },
   "vmName": {
-    "value": "jbosseap73-rhel8-payg-vm3"
+    "value": "EAP73-RHEL8-PAYG-vm5"
   },
   "adminUsername": {
     "value": "demouser"
@@ -21,7 +21,7 @@
     "value": "existing"
   },
   "virtualNetworkName": {
-    "value": "external-rhel-vnet"
+    "value": "EXT-VNET"
   },
   "addressPrefixes": {
     "value": [
@@ -29,25 +29,25 @@
     ]
   },
   "subnetName": {
-    "value": "external-rhel-subnet"
+    "value": "ext-subnet1"
   },
   "subnetPrefix": {
-    "value": "10.0.1.0/24"
+    "value": "10.0.0.0/24"
   },
   "virtualNetworkResourceGroupName": {
-    "value": "PIP-test-rg1"
+    "value": "Pre-req-env-soln-test-Rg1"
   },
   "publicIpNewOrExisting": {
     "value": "new"
   },
   "publicIpName": {
-    "value": "jbosseap73-rhel8-payg-vm3-ip"
+    "value": "EAP73-RHEL8-PAYG-vm5-ip"
   },
   "publicIpDns": {
-    "value": "jbosseap73-rhel8-payg-vm3-25f22f2a61"
+    "value": "eap73-rhel8-payg-vm5-341b549344"
   },
   "publicIpResourceGroupName": {
-    "value": "EAP73-RHEL8-payg-Soln-Test-Rg3"
+    "value": "EAP73-RHEL8-payg-Soln-Test-Rg5"
   },
   "publicIPAllocationMethod": {
     "value": "Dynamic"
@@ -59,7 +59,7 @@
     "value": "new"
   },
   "storageAccountName": {
-    "value": "jbosseap0a224ba218"
+    "value": "eap73rhe7429500a00"
   },
   "storageAccountType": {
     "value": "Standard_LRS"
@@ -71,12 +71,12 @@
     "value": "demoPassword1!"
   },
   "rhsmUserName": {
-    "value": "surajpaispekt"
+    "value": "microsoftuser"
   },
   "rhsmPassword": {
-    "value": "Spektra@123"
+    "value": "Password@123"
   },
   "rhsmPoolEAP": {
-    "value": "8a85f99972762fce017299694421706b"
+    "value": "8a85f99c746e3964017478c9da14688c"
   }
 }
