@@ -125,7 +125,7 @@
                         },
                         "defaultValue": {
                             "publicIpAddressName": "[concat(basics('vmName'), '-ip')]",
-                            "domainNameLabel": "[concat(basics('vmName'), '-', take(replace(guid(), '-', ''), 10))]"
+                            "domainNameLabel": "[concat(toLower(basics('vmName')), '-', take(replace(guid(), '-', ''), 10))]"
                         },
                         "options": {
                             "hideExisting": false,
