@@ -71,12 +71,12 @@
     "value": "demoPassword1&"
   },
   "rhsmUserName": {
-    "value": "Suraj@ss.com"
+    "value": "microsoftuser"
   },
   "rhsmPassword": {
-    "value": "Spektra@123&"
+    "value": "Password&123"
   },
   "rhsmPoolEAP": {
-    "value": "8a85f99974d1005001751c968ffc1dc7"
+    "value": "8a85f99c746e3964017478c9da14688c"
   }
 }
